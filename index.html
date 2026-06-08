@@ -6,16 +6,16 @@
     <title>Retro Tetris</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-slate-900 flex items-center justify-center h-screen m-0 overflow-hidden">
-    <div class="game-container shadow-2xl border-4 border-slate-700 bg-black p-4 rounded-lg">
+<body>
+    <div class declass="game-container shadow-2xl border-4 border-slate-700 bg-black p-4 rounded-lg">
         <div class="info text-white mb-4 text-center">
-            <h1 class="text-3xl font-bold tracking-widest text-blue-400 uppercase">Tetris</h1>
-            <p class="text-xl mt-2">Score: <span id="score" class="font-mono text-yellow-400">0</span></p>
+            <h1>TETRIS</h1>
+            <p class="score-text">Score: <span id="score">0</span></p>
         </div>
-        <canvas id="tetris" width="240" height="400" class="bg-slate-950 block mx-auto rounded shadow-inner"></canvas>
-        <div class="controls mt-4 text-slate-400 text-xs space-y-1">
-            <p class="flex justify-between"><span>⬅️ ← Move</span> <span>Right →➡️</span></p>
-            <p class="flex justify-between"><span>⬆️ Rotate</span> <span>⬇️ Soft Drop</span></p>
+        <canvas id="tetris" width="240" height="400"></canvas>
+        <div class="controls">
+            <p>⬅️ ← | → ➡️</p>
+            <p>⬆️ Rotate | ⬇️ Down</p>
         </div>
     </div>
     <script src="script.js"></script>
