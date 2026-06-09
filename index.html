@@ -4,18 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retro Tetris</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class declass="game-container shadow-2xl border-4 border-slate-700 bg-black p-4 rounded-lg">
+<body class="bg-slate-950 flex items-center justify-center h-screen m-0 overflow-hidden">
+    <div class="game-container shadow-2xl border-4 border-slate-700 bg-black p-4 rounded-lg relative">
         <div class="info text-white mb-4 text-center">
-            <h1>TETRIS</h1>
-            <p class="score-text">Score: <span id="score">0</span></p>
+            <h1 class="text-3xl font-bold tracking-widest text-blue-400 uppercase">Tetris</h1>
+            <p class="text-xl mt-2">Score: <span id="score" class="font-mono text-yellow-400">0</span></p>
         </div>
-        <canvas id="tetris" width="240" height="400"></canvas>
-        <div class="controls">
-            <p>⬅️ ← | → ➡️</p>
-            <p>⬆️ Rotate | ⬇️ Down</p>
+        <canvas id="tetris" width="240" height="400" class="bg-slate-950 block mx-auto rounded shadow-inner"></canvas>
+        <div class="controls mt-4 text-slate-400 text-xs space-y-1">
+            <p class="flex justify-between"><span>⬅️ ← Move</span> <span>Right ➡️→</span></p>
+            <p class="flex justify-between"><span>⬆️ / W Rotate</span> <span>⬇️ Soft Drop | Z Hard Drop</span></p>
+        </div>
+        
+        <!-- Game Over Overlay -->
+        <div id="game-over" class="hidden absolute inset-0 bg-black/80 flex items-center justify-center rounded-lg">
+            <div class="text-center">
+                <h2 class="text-5xl font-bold text-red-500 mb-4">GAME OVER</h2>
+                <p class="text-xl text-yellow-400 mb-6">Final Score: <span id="final-score">0</span></p>
+                <button id="restart-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition">Restart</button>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
